@@ -1,5 +1,10 @@
 import java.util.Scanner;
 import java.util.Random;
+/**********************************
+ NOTES:
+    Figure out how to randomize a computer from selecting between the 3 elements.
+ 
+ */
 
 public class Main
 {
@@ -8,6 +13,8 @@ public class Main
 	    //Water playerWaterBeast = new Water();
 	    //Earth playerEarthBeast = new Earth();
 	    Fire computerFireType = new Fire();
+	    //Water computerWaterType = new Water();
+	    //Earth computerEarthType = new Earth();
 	    
 	    boolean gameOver = false;
 	    String playerBeastName = null;
