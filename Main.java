@@ -2,8 +2,7 @@ import java.util.Scanner;
 import java.util.Random;
 /**********************************
  NOTES:
-    Figure out how to randomize a computer from selecting between the 3 elements.
- 
+    Give the moves cooldowns.
  */
 
 
