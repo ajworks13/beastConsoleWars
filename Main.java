@@ -16,10 +16,11 @@ public class Main
     static boolean winner = false;
     static String playerBeastName = null;   
     static String computerBeastName = "CPU";
+    static int p1Mistake = -1;
 
     
     public static void winner(int theHealth, String playerOrCpu){
-        System.out.println("Currently at: " + theHealth);
+       // System.out.println("Currently at: " + theHealth);
         if(theHealth <= 0 && playerOrCpu.equals(playerBeastName)){
             System.out.println("WE HAVE A WINNER! - " + computerBeastName);
             winner = true;
@@ -75,7 +76,18 @@ public class Main
                 // HUMAN"s turn ---------------
                 if(p1Choice == 1){
                     computerFireType.hit();
-                    computerFireType.getHp();
+                    //computerFireType.getHp();
+                }else if(p1Choice == 2){
+                    computerFireType.hardHit();
+                }else if(p1Choice == 3){
+                    computerFireType.specialTypeHit();
+                }else if(p1Choice == 4){
+                    playerFireBeast.heal();
+                }else{
+                    do{
+                        System.out.println("Invalid move.. select from 1 - 4\n");
+                        p1Mistake = sc.nextInt();
+                    }while(p1Mistake >= 4 || p1Mistake < 1);
                 }
                 
                 winner(computerFireType.getHp(), computerBeastName);
