@@ -1,6 +1,18 @@
 public class Fire extends Beast{
     private int hp = 1000;
     
+    // getter
+    public int getHp(){
+        return hp;
+    }
+    // setter
+    public void setHp(int remainingHp){
+        this.hp = remainingHp;
+    }
+    
+    
+    
+    
     public Fire(){
         this.hp = hp;
     }
