@@ -14,15 +14,21 @@ public class Main
     // Global Vars
     static boolean gameOver = false;
     static boolean winner = false;
-    static String playerBeastName = null;
+    static String playerBeastName = null;   
+    static String computerBeastName = "CPU";
+
     
     public static void winner(int theHealth, String playerOrCpu){
         System.out.println("Currently at: " + theHealth);
         if(theHealth <= 0 && playerOrCpu.equals(playerBeastName)){
-            System.out.println("WE HAVE A WINNER!");
+            System.out.println("WE HAVE A WINNER! - " + computerBeastName);
             winner = true;
             gameOver = true;
 
+        }else if(theHealth <= 0 && playerOrCpu.equals(computerBeastName)){
+            System.out.println("WE HAVE A WINNER! - " + playerBeastName);
+            winner = true;
+            gameOver = true;
         }
     }
     
@@ -34,7 +40,6 @@ public class Main
 	    //Water computerWaterType = new Water();
 	    //Earth computerEarthType = new Earth();
 	    
-	    String computerBeastName = "CPU";
 	    Random rand = new Random();
 	    int randomBeastForCPU = rand.nextInt(1)+1; // change to 3
         /*
