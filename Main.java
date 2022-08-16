@@ -67,10 +67,12 @@ public class Main
             System.out.println("Welcome and enjoy the game " + playerBeastName);
 
             do{
+                System.out.println("Cooldown: " + playerFireBeast.getCooldownCountDown());
                 System.out.println("Player 1! " + playerBeastName + " it is your turn.");
                 System.out.println("\n" + "Player HP: " + playerFireBeast.getHp() + " ---- CPU HP: " + computerFireType.getHp());
                 System.out.println("Type a number... (1) to regular hit   (2) to hard hit  (3) to special move hit  (4) to heal yourself");
                 int p1Choice = sc.nextInt();
+                
                 
                 // HUMAN"s turn ---------------
                 if(p1Choice == 1){
