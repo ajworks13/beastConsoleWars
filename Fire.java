@@ -12,6 +12,7 @@ public class Fire extends Beast{
         this.hp = remainingHp;
     }
     
+    // getter
     public byte getCooldownCountDown(){
         return hitCooldown;
     }
@@ -34,33 +35,44 @@ public class Fire extends Beast{
         checkForCooldown();
     }
     
-    public void specialTypeHit(){
-        //System.out.println("Fire type special move!!");
-        //hp-=400;
-        //hitCooldown = 3;
-        checkForCooldown();
-        
-        if(hitCooldown == 0){
-            hp-=400;
-            hitCooldown = 3;
-            System.out.println(" -- Move under cooldown -- : " + hitCooldown);
-        }else if(hitCooldown > 0){
-            System.out.println(" -- Still under cooldown --");
-            hitCooldown-=1;
-        }
-        
-        
-    }
-    
     public void heal(){
         hp+=300;
         checkForCooldown();
     }
     
+    public void specialTypeHit(){
+        //System.out.println("Fire type special move!!");
+        //hp-=400;
+        //hitCooldown = 3;
+        //checkForCooldown();
+        
+        if(hitCooldown == 0){
+            hp-=400;
+            hitCooldown = 4;
+            System.out.println(" -- Move under cooldown -- : " + hitCooldown);
+        }else if(hitCooldown > 0){
+            System.out.println(" -- Still under cooldown --");
+            //hitCooldown-=1;
+        }
+        
+        checkForCooldown();
+
+        
+        
+    }
+    
+    
+    
     private void checkForCooldown(){
+        System.out.println(" -- cooldown -- : " + hitCooldown);
         if(hitCooldown == 0){
             System.out.println("Special move is ready!");
+        }else{
+            hitCooldown-=1;
+
         }
+        
+        
     }
     
     
