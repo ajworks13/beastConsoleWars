@@ -2,7 +2,8 @@ import java.util.Scanner;
 import java.util.Random;
 /**********************************
  NOTES:
-    Give the moves cooldowns.
+    Keep adjusting cooldown handling.
+    Make a seperate class for CPU to avoid clashing on cooldown sharing?
  */
 
 
@@ -92,7 +93,7 @@ public class Main
                 }
                 
                 winner(computerFireType.getHp(), computerBeastName);
-                int randomPowerSelectForCPU = rand.nextInt(4)+1; // change to 4
+                int randomPowerSelectForCPU = rand.nextInt(2)+1; // change to 4
 
                 // COMPUTER's turn -------------
                 if(randomPowerSelectForCPU == 1){
